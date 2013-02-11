@@ -1,6 +1,6 @@
 # Provide a simple gemspec so you can easily use your enginex
 # project in your rails apps through git.
-require 'omniauth/avvo/version'
+require File.expand_path('../lib/omniauth/avvo/version', __FILE__)
 Gem::Specification.new do |s|
   s.name = "omniauth-avvo"
   s.version = OmniAuth::Avvo::VERSION
