@@ -11,8 +11,7 @@ Gem::Specification.new do |s|
   s.author = "Jeff Ching"
   s.email = "ching.jeff@gmail.com"
   s.homepage = "http://github.com/chingor13/omniauth-avvo"
-  s.extra_rdoc_files = ['README.rdoc']
-  s.has_rdoc = true
+  s.license = "MIT"
 
   s.files = `git ls-files`.split("\n")
   s.test_files = Dir.glob('test/*_test.rb')
