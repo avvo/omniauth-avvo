@@ -6,7 +6,7 @@ module OmniAuth
     class Avvo < OmniAuth::Strategies::OAuth2
       option :name, "avvo"
       option :client_options, {
-        :site => "http://api.avvo.com", 
+        :site => "https://api.avvo.com", 
         :authorize_url => '/api/2/oauth2/authorize', 
         :token_url => '/api/2/oauth2/authorize',
         :ssl => {
