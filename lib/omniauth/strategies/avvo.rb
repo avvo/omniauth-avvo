@@ -6,7 +6,7 @@ module OmniAuth
     class Avvo < OmniAuth::Strategies::OAuth2
       option :name, "avvo"
       option :client_options, {
-        :site => "https://login.avvo.com", 
+        :site => "http://login.avvo.com/", 
         :authorize_url => '/api/1/oauth2/authorize', 
         :token_url => '/api/1/oauth2/authorize',
         :ssl => {
@@ -37,8 +37,8 @@ module OmniAuth
         @raw_info ||= begin
           access_token.options[:header_format] = "OAuth %s"
           json = access_token.get('/api/1/users/me').body
-          user_data = JSON.parse(json) || {} rescue {}
-          user_data["user"] || {}
+          user_data = JSON.parse(json) || {}
+          user_data.fetch("users", []).first || {}
         end
       end
     end
