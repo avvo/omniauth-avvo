@@ -13,7 +13,8 @@ module OmniAuth
           :verify => false
         }
       }
-      option :authorize_options, [:scope, :state]
+      option :authorize_options, []
+      option :provider_ignores_state, true
 
       uid do
         raw_info['id']
