@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version = OmniAuth::Avvo::VERSION
   s.description = 'Avvo.com strategy for OmniAuth'
   s.summary = 'Avvo.com strategy for OmniAuth'
-  s.add_dependency "omniauth-oauth2", "~> 1.1.0"
+  s.add_dependency "omniauth-oauth2", "~> 1.1"
 
   s.author = "Jeff Ching"
   s.email = "ching.jeff@gmail.com"
