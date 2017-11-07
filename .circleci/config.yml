@@ -6,7 +6,6 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: rake test
       # Clean up .gem files from all previous builds
       - run: rm -f *.gem
       - run: gem install package_cloud
