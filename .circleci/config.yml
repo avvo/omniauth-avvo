@@ -8,7 +8,6 @@ jobs:
       - run: bundle config packagecloud.io $PACKAGECLOUD_READ_TOKEN
       - run: gem install package_cloud
       - checkout
-      - run: bundle install
       # Clean up .gem files from all previous builds
       - run: rm -f *.gem
       - run: gem build $(ls *.gemspec)
