@@ -18,8 +18,6 @@ workflows:
   build-workflow:
     jobs:
       - build:
-          requires:
-          - test
           context: org-global
           filters:
             tags:
