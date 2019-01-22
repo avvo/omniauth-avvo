@@ -1,7 +1,7 @@
 Omniauth-Avvo
 =============
 
-[Avvo.com][avvo] strategy for [OmniAuth][omniauth]
+Avvo strategy for [OmniAuth][omniauth]
 
 ## Usage
 
@@ -19,11 +19,10 @@ Your `request.env['omniauth.auth']` hash will contain:
 
 See [OmniAuth docs][omniauthsetup] for more information on integrating with a standard OmniAuth strategy.
 
-## Obtaining an API Key
+## Setting up OAuth at Avvo
+[Confluence doc on setup][confluence].
 
-Contact [Josh King][josh] to get set up.
 
-[avvo]: http://www.avvo.com
 [omniauth]: https://github.com/intridea/omniauth
 [omniauthsetup]: https://github.com/intridea/omniauth#integrating-omniauth-into-your-application
-[josh]: mailto:josh@avvo.com
+[confluence]: https://confluence.internetbrands.com/pages/viewpage.action?spaceKey=AVVO&title=Setting+up+OAuth
