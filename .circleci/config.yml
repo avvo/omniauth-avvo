@@ -1,25 +1,24 @@
----
-version: 2
+version: 2.1
+
+orbs:
+  artifact-management: avvo/artifact-management@0.0.6
+
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.2
+      - image: circleci/ruby:2.6
     steps:
-      - run: bundle config packagecloud.io $PACKAGECLOUD_READ_TOKEN
-      - run: gem install package_cloud
       - checkout
-      # Clean up .gem files from all previous builds
-      - run: rm -f *.gem
-      - run: gem build $(ls *.gemspec)
-      - run: package_cloud push avvo/gems $(ls *.gem)
+      - artifact-management/gem-build-and-push
+
 workflows:
-  version: 2
+  version: 2.1
   build-workflow:
     jobs:
       - build:
           context: org-global
           filters:
             tags:
-              only: /v[0-9]+\.[0-9]+\.[0-9]+.*/
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+.*/
             branches:
               ignore: /.*/
